@@ -20,3 +20,19 @@ def compare_github_user(user1: str, user2: str) -> dict:
         raise HTTPException(status_code=404, detail="One or both users not found")
     return result
 
+@router.get("/users")
+def get_interesting_users() -> list[str]:
+    """Returns a list of interesting GitHub users to compare."""
+    return [
+        "torvalds",
+        "gvanrossum",
+        "kennethreitz",
+        "django",
+        "suctiontomb"
+
+    ]
+
+
+
+
+
